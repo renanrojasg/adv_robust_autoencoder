@@ -1,0 +1,35 @@
+#!/bin/sh
+root="./.."
+CUDA_VISIBLE_DEVICES=4,5,6,7 python3 ${root}/train_generator.py\
+  --load_classifier ${root}/checkpoints/alexnet_inv/alexnet_ar.pt\
+  --load_comparator ${root}/checkpoints/alexnet_inv/alexnet_ar.pt\
+  --out_dir ${root}/logs/train_generator\
+  --data ${root}/datasets/ILSVRC2012\
+  --arch alexnet\
+  --dataset imagenet\
+  --upsample_mode conv5_tconv\
+  --adversarial_loss\
+  --adversarial_loss_weight 100\
+  --feature_loss l2_loss\
+  --feature_loss_weight 0.01\
+  --pixel_loss l1_loss\
+  --pixel_loss_weight 0.000002\
+  --disc_loss_weight 100\
+  --disc_lr 0.0012\
+  --disc_adam_betas 0 0.9\
+  --gen_lr 0.0003\
+  --gen_adam_betas 0 0.9\
+  --step_lr_gamma 0.1\
+  --step_lr 30\
+  --epochs 90\
+  --num_workers 64\
+  --batch_size 128\
+  --cp_step 10\
+  --seed 16\
+  --weights_init\
+  --spectral_init\
+  --shuffle\
+  --transform_train resize_norm\
+  --transform_test resize_norm\
+  --transform_init_dim 224\
+  --transform_output skip

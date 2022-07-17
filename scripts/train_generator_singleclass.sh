@@ -1,0 +1,32 @@
+#!/bin/sh
+root="./.."
+CUDA_VISIBLE_DEVICES=7 python3 ${root}/train_generator.py\
+  --arch alexnet\
+  --dataset imagenet\
+  --data ${root}/datasets/cifar\
+  --train_single_class 0\
+  --single_class_dataset cifar10\
+  --load_classifier ${root}/checkpoints/alexnet_inv/alexnet_ar.pt\
+  --load_comparator ${root}/checkpoints/alexnet_inv/alexnet_ar.pt\
+  --out_dir ${root}/logs/train_generator_singleclass\
+  --upsample_mode conv5_tconv\
+  --adversarial_loss\
+  --adversarial_loss_weight 100\
+  --feature_loss l2_loss\
+  --feature_loss_weight 0.01\
+  --pixel_loss l1_loss\
+  --pixel_loss_weight 0.002\
+  --disc_loss_weight 100\
+  --disc_lr 0.0012\
+  --disc_adam_betas 0 0.9\
+  --disc_adam_wd 0\
+  --gen_lr 0.0003\
+  --step_lr_gamma 0.1\
+  --step_lr 30\
+  --epochs 90\
+  --num_workers 64\
+  --batch_size 128\
+  --seed 16\
+  --weights_init\
+  --spectral_init\
+  --shuffle

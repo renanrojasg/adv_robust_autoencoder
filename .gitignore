@@ -1,0 +1,13 @@
+/piqa/
+/checkpoints/
+/datasets/
+/logs/
+/stdout/
+/__pycache__/
+/utils/__pycache__/
+/models/__pycache__/**
+/losses/__pycache__/**
+/venv02/
+/scripts_all/
+*.swp
+*.pyc
