@@ -104,7 +104,7 @@ Please refer to `./parsing.py` for a full set of input arguments for predict, an
 + Anomaly detection: Store in `./checkpoints/alexnet_ad` folder.
 + Denoising: Store in `./checkpoints/alexnet_den` folder.
 + Style Transfer: Store in `./checkpoints/alexnet_st` folder.
-+ VGG-19 model (Torchvsion): Store in `./checkpoints/ext/tvis` folder.
++ VGG-19 model (Torchvision): Store in `./checkpoints/ext/tvis` folder.
 
 ## Code References
 Besides the use of the [robustness](https://github.com/MadryLab/robustness) library, our implementations of the wavelet pooling (skip connection) approach as well as the feature alignment (whitening and coloring transformation) are inspired by the official [WCT2](https://github.com/clovaai/WCT2) implementation.
