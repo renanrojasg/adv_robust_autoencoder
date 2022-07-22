@@ -12,6 +12,14 @@ These include:
 - Image denoising
 - Anomaly detection
 
+If you use this software, please consider citing:
+
+    @article{rojas_2021_inverting,
+      title={Inverting Adversarially Robust Networks for Image Synthesis},
+      author={Rojas-Gomez, Renan A and Yeh, Raymond A and Do, Minh N and Nguyen, Anh},
+      journal={arXiv preprint arXiv:2106.06927},
+      year={2021}
+    }
 
 ## Installation
 
@@ -108,4 +116,3 @@ Please refer to `./parsing.py` for a full set of input arguments for predict, an
 
 ## Code References
 Besides the use of the [robustness](https://github.com/MadryLab/robustness) library, our implementations of the wavelet pooling (skip connection) approach as well as the feature alignment (whitening and coloring transformation) are inspired by the official [WCT2](https://github.com/clovaai/WCT2) implementation.
-
