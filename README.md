@@ -1,29 +1,33 @@
 # Inverting Adversarially Robust Networks for Image Synthesis
-### Authors: Renán A. Rojas-Gómez, Raymond A. Yeh, Minh N. Do, Anh Nguyen
-### [(Preprint)](https://arxiv.org/abs/2106.06927)
+### Authors: [Renán A. Rojas-Gómez](mailto:renanar2@illinois.edu), Raymond A. Yeh, Minh N. Do, Anh Nguyen [(Preprint)](https://arxiv.org/abs/2106.06927)
 
+Pytorch implementation of our proposed adversarially robust (AR) autoencoder, comprised by an AR classifier and its corresponding feature inverter. Our code includes training, prediction and downstream task routines.
+
+## Description
 We empirically show that using adversarially robust (AR) representations as an image prior greatly improves the reconstruction accuracy of feature inversion models, and propose a robust encoding-decoding network for image synthesis and enhancement tasks.
 
-This repository includes scripts to reproduce the results reported in the main paper.
-These include:
+This repository includes scripts to reproduce the results reported in our paper. These include:
 
-- Feature inversion
-- Style transfer
-- Image denoising
-- Anomaly detection
+- ### **Feature inversion**
+![](readme/inv.jpg)
+---
 
-If you use this software, please consider citing:
+- ### **Style transfer**
+![](readme/st.jpg)
+---
 
-    @article{rojas_2021_inverting,
-      title={Inverting Adversarially Robust Networks for Image Synthesis},
-      author={Rojas-Gomez, Renan A and Yeh, Raymond A and Do, Minh N and Nguyen, Anh},
-      journal={arXiv preprint arXiv:2106.06927},
-      year={2021}
-    }
+- ### **Image denoising**
+![](readme/den.jpg)
+---
 
-## Installation
+- ### **Anomaly detection**
+![](readme/ad.jpg)
+---
 
-Our code requires the [robustness](https://github.com/MadryLab/robustness) library for adversarially robust training and dataloading purposes. We also use [piqa](https://github.com/francois-rozet/piqa) to compute accuracy metrics. 
+
+## Getting Started
+
+Our code uses the [robustness](https://github.com/MadryLab/robustness) library for adversarially robust training and dataloading purposes. We also use [piqa](https://github.com/francois-rozet/piqa) to compute accuracy metrics. 
 
 Please refer to the `conda_reqs.txt` and `pip_reqs.txt` for the full list of required packages to run our demo.
 
@@ -114,5 +118,15 @@ Please refer to `./parsing.py` for a full set of input arguments for predict, an
 + Style Transfer: Store in `./checkpoints/alexnet_st` folder.
 + VGG-19 model (Torchvision): Store in `./checkpoints/ext/tvis` folder.
 
-## Code References
-Besides the use of the [robustness](https://github.com/MadryLab/robustness) library, our implementations of the wavelet pooling (skip connection) approach as well as the feature alignment (whitening and coloring transformation) are inspired by the official [WCT2](https://github.com/clovaai/WCT2) implementation.
+## External References
+Besides the use of the [robustness](https://github.com/MadryLab/robustness) library, our implementation of the wavelet pooling (skip connections) and feature alignment (whitening and coloring transformation) are inspired by the official [WCT2](https://github.com/clovaai/WCT2) implementation.
+
+## Citation
+If you use this software, please consider citing:
+
+    @article{rojas_2021_inverting,
+      title={Inverting Adversarially Robust Networks for Image Synthesis},
+      author={Rojas-Gomez, Renan A and Yeh, Raymond A and Do, Minh N and Nguyen, Anh},
+      journal={arXiv preprint arXiv:2106.06927},
+      year={2021}
+    }
