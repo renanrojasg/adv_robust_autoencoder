@@ -1,5 +1,6 @@
 # Inverting Adversarially Robust Networks for Image Synthesis
-### Authors: [Renán A. Rojas-Gómez](mailto:renanar2@illinois.edu), Raymond A. Yeh, Minh N. Do, Anh Nguyen [(Preprint)](https://arxiv.org/abs/2106.06927)
+### Authors: [Renán A. Rojas-Gómez](mailto:renanar2@illinois.edu), Raymond A. Yeh, Minh N. Do, Anh Nguyen
+### [(Preprint)](https://arxiv.org/abs/2106.06927)
 
 Pytorch implementation of our proposed adversarially robust (AR) autoencoder, comprised by an AR classifier and its corresponding feature inverter. Our code includes training, prediction and downstream task routines.
 
