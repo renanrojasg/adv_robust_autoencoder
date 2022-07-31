@@ -31,7 +31,7 @@ else: raise ValueError( "Undefined dataset. Check 'dataset' input argument.")
 
 if args.stdout_logger:
   # Set stdout
-  args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt') # Standard output filename
+  args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt')
   sys.stdout= stdout_logger( stdout_str= args.stdout_str)
 
 # Content and style data

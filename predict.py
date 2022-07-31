@@ -26,8 +26,8 @@ args.out_folder= os.path.join( args._out_dir, "output") # Predictions folder
 if not os.path.exists( args.out_folder): os.makedirs( args.out_folder) 
 
 if args.stdout_logger:
-  # Set stdout logger
-  args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt') # Stdout filename
+  # Set stdout
+  args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt')
   sys.stdout= stdout_logger( stdout_str= args.stdout_str)
 
 # Fix random seed

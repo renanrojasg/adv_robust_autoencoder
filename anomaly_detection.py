@@ -28,13 +28,13 @@ if not os.path.exists( args.out_folder): os.makedirs( args.out_folder) # create 
 if args.seed: fix_seeds( args.seed) # fix pytorch random seed
 
 
-# set device
+# Set device
 device= ch.device( 'cuda' if ch.cuda.is_available() else 'cpu') 
 
 
 if args.stdout_logger:
-  # Set standard output folder
-  args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt') # Standard output filename
+  # Set stdout
+  args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt')
   sys.stdout= stdout_logger( stdout_str= args.stdout_str)
 
 

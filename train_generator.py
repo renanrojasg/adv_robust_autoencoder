@@ -47,8 +47,8 @@ else:
     args.infer_export= False
     args.prev_dir= None
 
-# Set stdout logger
 if args.stdout_logger:
+    # Set stdout
     args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt')
     sys.stdout= stdout_logger( stdout_str= args.stdout_str)
 

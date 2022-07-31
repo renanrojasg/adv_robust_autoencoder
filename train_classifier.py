@@ -30,13 +30,13 @@ args = parser.parse_args()
 args.exp_name= datetime.now().strftime( "%Y_%m_%d_%H_%M_%S")
 args.out_dir= os.path.join( args.out_dir, args.exp_name)
 
-# Fix pytorch random seed
-if args.seed: fix_seeds( args.seed)
-
 if args.stdout_logger:
   # Set stdout
   args.stdout_str= os.path.join( args.stdout_dir, args.exp_name + '.txt')
   sys.stdout= stdout_logger( stdout_str= args.stdout_str)
+
+# Fix random seed
+if args.seed: fix_seeds( args.seed)
 
 # Create output folder
 if not os.path.exists( args.out_dir):
