@@ -1,8 +1,9 @@
 # Inverting Adversarially Robust Networks for Image Synthesis
-### Authors: [Renán A. Rojas-Gómez](mailto:renanar2@illinois.edu), Raymond A. Yeh, Minh N. Do, Anh Nguyen
-### [(Preprint)](https://arxiv.org/abs/2106.06927)
+### [Renan A. Rojas-Gomez](http://renanar2.web.illinois.edu/)<sup>1</sup>, [Raymond A. Yeh](https://www.raymond-yeh.com/)<sup>2</sup>, [Minh N. Do](https://minhdo.ece.illinois.edu/)<sup>1</sup>, [Anh Nguyen](https://anhnguyen.me/research/)<sup>3</sup><br>
+University of Illinois at Urbana-Champaign<sup>1</sup>, Purdue University<sup>2</sup>, Auburn University<sup>3</sup><br/>
+### [[Paper (ACCV 2022)]](https://openaccess.thecvf.com/content/ACCV2022/papers/Rojas-Gomez_Inverting_Adversarially_Robust_Networks_for_Image_Synthesis_ACCV_2022_paper.pdf)
 
-Pytorch implementation of our proposed adversarially robust (AR) autoencoder, comprised by an AR classifier and its corresponding feature inverter. Our code includes training, prediction and downstream task routines.
+This is the official implementation of "Inverting Adversarially Robust Networks for Image Synthesis" accepted at ACCV 2022. Our code includes training, prediction and downstream task routines.
 
 ## Description
 We empirically show that using adversarially robust (AR) representations as an image prior greatly improves the reconstruction accuracy of feature inversion models, and propose a robust encoding-decoding network for image synthesis and enhancement tasks.
